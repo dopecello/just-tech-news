@@ -14,9 +14,9 @@ by William Locke
 ## Description
 This project utilizes Sequelize, and ORM for JavaScript in relation with SQL. This app allows user creation, in which the user has the ability to post, comment on, and upvote different posts that contain news. This app was tested on a local machine and then depolyed to Heroku.
 ## Requirements
-Express.js, Sequelize, Dotenv, JawsDB
+Express.js, Sequelize, Dotenv, JawsDB, bcrypt
 ## Usage
-JavaScript, SQL
+JavaScript, MySQL
 ## Contact-Me
 * Name - William Locke
 * Email - N/A
@@ -28,5 +28,4 @@ N/A
 N/A
 ```
 ## License
-        
-        Licensed under the none license.
+N/A
