@@ -1,4 +1,4 @@
-# Live News DataBase 
+# Live News Server 
 by William Locke
 ![Github license](https://img.shields.io/badge/license-none-yellowgreen.svg)
 ## Table of Contents
