@@ -1,5 +1,5 @@
 {
-  "name": "just-tech-news",
+  "name": "live-server-news",
   "version": "1.0.0",
   "description": "ORM practice",
   "main": "server.js",
@@ -21,6 +21,7 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.4"
   }
