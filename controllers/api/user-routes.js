@@ -29,15 +29,15 @@ router.get("/:id", (req, res) => {
         attributes: ["id", "comment_text", "created_at"],
         include: {
           model: Post,
-          attributes: ["title"]
-        }
+          attributes: ["title"],
+        },
       },
       {
         model: Post,
         attributes: ["title"],
         through: Vote,
-        as: 'voted_posts'
-      }
+        as: "voted_posts",
+      },
     ],
   })
     .then((dbUserData) => {
@@ -58,12 +58,15 @@ router.post("/", (req, res) => {
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-  })
-    .then((dbUserData) => res.json(dbUserData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+  }).then((dbUserData) => {
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      res.json(dbUserData);
     });
+  });
 });
 
 router.post("/login", (req, res) => {
@@ -84,7 +87,13 @@ router.post("/login", (req, res) => {
       return;
     }
 
-    res.json({ user: dbUserData, message: "You are now logged in!" });
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      res.json({ user: dbUserData, message: "You are now logged in!" });
+    });
   });
 });
 
