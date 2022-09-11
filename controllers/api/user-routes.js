@@ -3,7 +3,6 @@ const { User, Post, Vote, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 
-// get all users
 router.get("/", (req, res) => {
   User.findAll({
     attributes: { exclude: ["password"] },
@@ -71,7 +70,7 @@ router.post("/", withAuth, (req, res) => {
   });
 });
 
-router.post("/login", withAuth, (req, res) => {
+router.post("/login", (req, res) => {
   User.findOne({
     where: {
       email: req.body.email,
