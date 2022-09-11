@@ -14,9 +14,9 @@ by William Locke
 ## Description
 This project utilizes Sequelize, and ORM for JavaScript in relation with SQL. This app allows user creation, in which the user has the ability to post, comment on, and upvote different posts that contain news. This app was tested on a local machine and then depolyed to Heroku.
 ## Dependencies
-bcrypt, Connect-Session-Sequelize, dotenv, Express.js, Handlebars.js, Express-Session, MySql2, Sequelize, (Moment.js)
+bcrypt, Connect-Session-Sequelize, dotenv, Express.js, Express-Handlebars, Express-Session, MySql2, Sequelize, (Moment.js)
 ## Languages
-JavaScript, MySQL, JSON
+JavaScript, Handlebars, HTML, CSS, MySQL, JSON
 ## Contact-Me
 * Name - William Locke
 * Email - N/A
